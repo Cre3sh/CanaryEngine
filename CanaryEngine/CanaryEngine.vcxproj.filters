@@ -36,7 +36,7 @@
     <ClCompile Include="stb\stb_image.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Engine\ShaderManager\ShaderManager.cpp">
+    <ClCompile Include="src\Engine\Shader\ShaderProgram.cpp">
       <Filter>Source Files\Engine</Filter>
     </ClCompile>
     <ClCompile Include="..\glad.c">
@@ -63,7 +63,7 @@
     <ClCompile Include="Imgui\imgui.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Engine\UIManager\UIManager.cpp">
+    <ClCompile Include="src\Engine\UI\UIManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\Game\Player\PlayerCamera.cpp">
@@ -72,9 +72,21 @@
     <ClCompile Include="src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\Engine\Mesh\Mesh.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Engine\Mesh\Model.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Engine\Lighting\LightingManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Engine\Entity\Entity.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Engine\ShaderManager\ShaderManager.h">
+    <ClInclude Include="src\Engine\Shader\ShaderProgram.h">
       <Filter>Header Files\Engine</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\Desktop\glm\detail\_fixes.hpp">
@@ -1271,10 +1283,22 @@
     <ClInclude Include="SFML\include\SFML\Window.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Engine\UIManager\UIManager.h">
+    <ClInclude Include="src\Engine\UI\UIManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\Game\Player\PlayerCamera.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\Mesh\Mesh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\Mesh\Model.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\Lighting\LightingManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\Entity\Entity.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -1693,10 +1717,10 @@
     <None Include="..\..\..\..\Desktop\glm\gtx\wrap.inl">
       <Filter>Header Files\Ext</Filter>
     </None>
-    <None Include="shaders\VertexShader.vert">
+    <None Include="shaders\ObjectVertexShader.vert">
       <Filter>Shaders</Filter>
     </None>
-    <None Include="shaders\FragmentShader.frag">
+    <None Include="shaders\ObjectFragmentShader.frag">
       <Filter>Shaders</Filter>
     </None>
     <None Include="SFML\doc\html\AlResource_8hpp_source.html" />
@@ -2145,12 +2169,48 @@
     <None Include="SFML\include\SFML\System\Vector3.inl">
       <Filter>Header Files</Filter>
     </None>
+    <None Include="shaders\LightingCubeVS.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\LightingCubeFS.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="resources\Objects\Backpack\backpack.mtl">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Image Include="resources\textures\container.jpg">
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="resources\textures\awesomeface.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\textures\WoodContainer.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\..\..\..\Downloads\WoodContainer_Specular.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\textures\WoodContainer_Specular.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\Objects\Backpack\ao.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\Objects\Backpack\diffuse.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\Objects\Backpack\normal.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\Objects\Backpack\roughness.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\Objects\Backpack\specular.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\Objects\Backpack\backpack.obj">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

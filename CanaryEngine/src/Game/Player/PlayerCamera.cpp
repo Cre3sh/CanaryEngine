@@ -22,27 +22,27 @@ PlayerCamera::PlayerCamera(float PosX, float PosY, float PosZ, float UpX, float 
 
 glm::vec3 PlayerCamera::GetPosition()
 {
-	return glm::vec3();
+	return CameraPosition;
 }
 
 glm::vec3 PlayerCamera::GetFrontVector()
 {
-	return glm::vec3();
+	return FrontVector;
 }
 
 glm::vec3 PlayerCamera::GetUpVector()
 {
-	return glm::vec3();
+	return UpVector;
 }
 
 glm::vec3 PlayerCamera::GetRightVector()
 {
-	return glm::vec3();
+	return RightVector;
 }
 
 glm::vec3 PlayerCamera::GetWorldUpVector()
 {
-	return glm::vec3();
+	return WorldUp;
 }
 
 glm::mat4 PlayerCamera::GetViewMatrix()
